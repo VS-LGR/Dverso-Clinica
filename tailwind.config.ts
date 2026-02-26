@@ -44,6 +44,8 @@ const config: Config = {
       boxShadow: {
         soft: "0 4px 24px -4px rgba(126, 184, 164, 0.15), 0 8px 16px -6px rgba(126, 184, 164, 0.08)",
         card: "0 8px 32px -8px rgba(45, 42, 45, 0.08), 0 16px 48px -16px rgba(126, 184, 164, 0.12)",
+        sticker:
+          "0 2px 8px rgba(45, 42, 45, 0.06), 0 6px 16px -2px rgba(45, 42, 45, 0.08), 2px 4px 0 rgba(126, 184, 164, 0.06)",
       },
     },
   },

@@ -1,4 +1,5 @@
 import { PawPrint } from "@/components/ui/PawPrint";
+import { DogSticker } from "@/components/ui/DogSticker";
 
 export function Hero() {
   return (
@@ -14,6 +15,11 @@ export function Hero() {
             "linear-gradient(165deg, var(--color-accent-light) 0%, var(--color-background) 35%, var(--color-primary-light) 70%, var(--color-muted) 100%)",
         }}
       />
+
+      {/* Single sticker: bottom-right, subtle */}
+      <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 pointer-events-none opacity-90 hidden sm:block">
+        <DogSticker size={70} variant="tilt-right" />
+      </div>
 
       {/* Decorative paws — scattered, animated */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
