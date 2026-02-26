@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  /* Pastel palette: joy and warmth */
-  --color-primary: #7eb8a4;
-  --color-primary-light: #a8d4c4;
-  --color-secondary: #c4a8d4;
-  --color-secondary-light: #e2d4e8;
-  --color-accent: #f4c2a8;
-  --color-accent-light: #fae4d9;
-  --color-muted: #f5f0f5;
-  --color-background: #fefefe;
+  /* Pastel palette: health, warmth, joy */
+  --color-primary: #6ba892;
+  --color-primary-light: #9cc9b8;
+  --color-secondary: #b89ac9;
+  --color-secondary-light: #ddd0e6;
+  --color-accent: #e8b89a;
+  --color-accent-light: #f5e2d6;
+  --color-muted: #f8f5f9;
+  --color-background: #fcfbfc;
   --color-foreground: #2d2a2d;
 }
 
@@ -19,8 +19,14 @@
   body {
     @apply bg-background text-foreground antialiased;
   }
-  /* Visible focus for accessibility */
   *:focus-visible {
     @apply outline-2 outline-offset-2 outline-primary;
+  }
+}
+
+/* Staggered section entrance (use opacity-0 animate-fade-in-up with delay) */
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
   }
 }

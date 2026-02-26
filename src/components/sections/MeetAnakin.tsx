@@ -1,29 +1,33 @@
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
+import { PawPrint } from "@/components/ui/PawPrint";
 import Image from "next/image";
 
 export function MeetAnakin() {
   return (
-    <SectionWrapper id="anakin" variant="accent">
-      <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-        Conheça nossa estrela!
-      </h2>
-      <div className="flex flex-col md:flex-row gap-8 items-center">
-        <div className="shrink-0 w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden bg-primary-light flex items-center justify-center">
-          {/* Replace src with real image (e.g. /anakin.jpg) when available */}
+    <SectionWrapper id="anakin" variant="accent" card entranceDelay="0.15s">
+      <div className="flex items-center gap-3 mb-8">
+        <PawPrint size={36} animate="pulse" className="opacity-80" />
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+          Conheça nossa estrela!
+        </h2>
+      </div>
+      <div className="flex flex-col md:flex-row gap-10 items-center">
+        <div className="shrink-0 w-52 h-52 md:w-60 md:h-60 rounded-3xl overflow-hidden bg-gradient-to-br from-primary-light to-accent-light shadow-soft flex items-center justify-center ring-2 ring-white/60">
           <Image
             src="/placeholder-anakin.svg"
             alt="Anakin, cachorro de suporte emocional do núcleo Dverso"
-            width={224}
-            height={224}
+            width={240}
+            height={240}
             className="object-cover w-full h-full"
           />
         </div>
-        <div className="space-y-4 text-foreground/90 leading-relaxed">
+        <div className="space-y-5 text-foreground/88 leading-relaxed text-base md:text-lg">
           <p>
-            O <strong>Anakin</strong> é o nosso cachorro de suporte emocional e
-            uma presença especial no núcleo. Ele participa de parte das
-            atividades e sessões, sempre de forma ética e planejada, para
-            ajudar a criar um ambiente mais acolhedor e seguro.
+            O <strong className="text-primary">Anakin</strong> é o nosso
+            cachorro de suporte emocional e uma presença especial no núcleo.
+            Ele participa de parte das atividades e sessões, sempre de forma
+            ética e planejada, para ajudar a criar um ambiente mais acolhedor
+            e seguro.
           </p>
           <p>
             A interação com animais pode reduzir ansiedade, favorecer o vínculo
@@ -34,8 +38,8 @@ export function MeetAnakin() {
             clínica.
           </p>
           <p>
-            Conheça nossa estrela de quatro patas e descubra como a Dverso
-            une inovação, cuidado e um toque de alegria no seu caminho.
+            Conheça nossa estrela de quatro patas e descubra como a Dverso une
+            inovação, cuidado e um toque de alegria no seu caminho.
           </p>
         </div>
       </div>

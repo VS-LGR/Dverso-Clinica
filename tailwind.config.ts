@@ -22,6 +22,29 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-nunito)", "system-ui", "sans-serif"],
       },
+      animation: {
+        "paw-float": "paw-float 4s ease-in-out infinite",
+        "paw-pulse": "paw-pulse 2.5s ease-in-out infinite",
+        "fade-in-up": "fade-in-up 0.6s ease-out forwards",
+      },
+      keyframes: {
+        "paw-float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        "paw-pulse": {
+          "0%, 100%": { opacity: "0.5" },
+          "50%": { opacity: "0.9" },
+        },
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(16px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      boxShadow: {
+        soft: "0 4px 24px -4px rgba(126, 184, 164, 0.15), 0 8px 16px -6px rgba(126, 184, 164, 0.08)",
+        card: "0 8px 32px -8px rgba(45, 42, 45, 0.08), 0 16px 48px -16px rgba(126, 184, 164, 0.12)",
+      },
     },
   },
   plugins: [],
